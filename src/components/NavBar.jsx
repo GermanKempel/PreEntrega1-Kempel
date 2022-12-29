@@ -1,3 +1,4 @@
+import { NavLink } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -26,9 +27,7 @@ function NavBar() {
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action5">Niños</NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#" disabled>
-              Contacto
-            </Nav.Link>
+            <Nav.Link href="#">Contacto</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -39,7 +38,9 @@ function NavBar() {
             />
             <Button variant="light">Buscar</Button>
           </Form>
-          <Carrito></Carrito>
+          <Nav.Link>
+            <Carrito />
+          </Nav.Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
