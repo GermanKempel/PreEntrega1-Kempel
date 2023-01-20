@@ -1,17 +1,20 @@
-import { NavLink } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 import Carrito from "./CartWidget";
 
 function NavBar() {
   return (
     <Navbar bg="success" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">GK-Indumentaria</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/" style={{ textDecoration: "none" }}>
+            GK-Outlet
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -19,15 +22,27 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Inicio</Nav.Link>
-            <Nav.Link href="#action2">Novedades</Nav.Link>
-            <NavDropdown title="Productos" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Hombre</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">Mujer</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">Niños</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link href="#">Contacto</Nav.Link>
+            <Nav.Link>
+              <Link to="/Hombre" style={{ textDecoration: "none" }}>
+                Hombre
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/Mujer" style={{ textDecoration: "none" }}>
+                Mujer
+              </Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/Joyeria" style={{ textDecoration: "none" }}>
+                Joyería
+              </Link>
+            </Nav.Link>
+
+            <Nav.Link>
+              <Link to="/Electronica" style={{ textDecoration: "none" }}>
+                Electrónica
+              </Link>
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
